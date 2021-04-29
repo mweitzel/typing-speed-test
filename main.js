@@ -340,7 +340,8 @@ function calculateGrossWordsPerMin() {
   calculateNetWordsPerMin();
 }
 function calculateNetWordsPerMin() {
-  netWPM = grossWPM - totalCharsWithErrors / timeElapsed;
+  // remove any characters with errors from the WPM calculation.
+  netWPM = grossWPM - totalCharsWithErrors / 5 / (timeElapsed / 60);
   displayNetWPM.innerHTML = Math.round(netWPM);
 }
 /************************************************** Final Summary and Reset **************************************************************************************/
