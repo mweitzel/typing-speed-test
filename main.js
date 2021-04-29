@@ -34,7 +34,7 @@ document.querySelector("#app").innerHTML = `
                 <p id="entered-text" class=""></p>
             </div>
             <div id="inner-display" class="w-2/4 h-12 flex align-middle">
-                <input id="text-input" class="w-full" autofocus>
+                <input id="text-input" class="w-full" autofocus autocapitalize="none">
             </div>
         </div>
     </div>
